@@ -5465,3 +5465,73 @@ Caused by: java.io.IOException: Cannot find any registered HttpDestinationFactor
 260910 [Thread-12] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
 260911 [Thread-12] INFO  s.e.jetty.EmbeddedJettyServer - done
 260914 [Thread-3] INFO  o.a.c.c.s.CamelHttpTransportServlet - Destroyed CamelHttpTransportServlet[CamelServlet]
+417  [main] INFO  com.redhat.consulting.fuse.Application - Starting Application on rosantos with PID 25074 (/home/rosantos/workspace-jb421/fuse-cxf-demo/target/classes started by rosantos in /home/rosantos/workspace-jb421/fuse-cxf-demo)
+419  [main] INFO  com.redhat.consulting.fuse.Application - No active profile set, falling back to default profiles: default
+457  [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c0b2694: startup date [Mon Jul 06 19:57:27 BRT 2020]; root of context hierarchy
+524  [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final-redhat-2
+794  [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [spring/camelContext.xml]
+2065 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'countryInfoServiceSoapType' of type [org.apache.cxf.jaxws.spring.JaxWsProxyFactoryBeanDefinitionParser$JAXWSSpringClientProxyFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2095 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$35380c9e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2307 [main] WARN  io.undertow.websockets.jsr - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2325 [main] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
+2325 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1868 ms
+2454 [main] INFO  o.s.b.w.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2457 [main] INFO  o.s.b.w.servlet.ServletRegistrationBean - Mapping servlet: 'CamelServlet' to [/camel/*]
+2458 [main] INFO  o.s.b.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2459 [main] INFO  o.s.b.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2459 [main] INFO  o.s.b.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2459 [main] INFO  o.s.b.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2988 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c0b2694: startup date [Mon Jul 06 19:57:27 BRT 2020]; root of context hierarchy
+3055 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+3056 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+3086 [main] INFO  o.s.w.s.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+3086 [main] INFO  o.s.w.s.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+3127 [main] INFO  o.s.w.s.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+3223 [main] INFO  o.a.c.i.converter.DefaultTypeConverter - Type converters loaded (core: 194, classpath: 22)
+3902 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+3939 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML routes from: classpath:camel/*.xml
+3939 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+3940 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.21.0.fuse-760027-redhat-00001 (CamelContext: camelContext-fc39e765-59d9-46d8-8de7-0ee1a958c6e7) is starting
+3941 [main] INFO  o.a.c.m.ManagedManagementStrategy - JMX is enabled
+4082 [main] INFO  o.a.c.w.s.f.ReflectionServiceFactoryBean - Creating Service {http://www.oorsprong.org/websamples.countryinfo}CountryInfoServiceSoapTypeService from class org.oorsprong.websamples_countryinfo.CountryInfoServiceSoapType
+4565 [main] INFO  o.apache.camel.spring.SpringCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+4795 [main] INFO  o.a.c.w.s.f.ReflectionServiceFactoryBean - Creating Service {http://soap.endpoints.whois.com/}ISoapWhoisServiceService from WSDL: /wsdl/whois.wsdl
+4872 [main] INFO  org.apache.cxf.endpoint.ServerImpl - Setting the server's publish address to be http://127.0.0.1:8089/soap/whois
+4938 [main] INFO  o.a.c.c.jackson.JacksonDataFormat - Found single ObjectMapper in Registry to use: com.fasterxml.jackson.databind.ObjectMapper@15a8b242
+4939 [main] INFO  o.a.c.c.jackson.JacksonDataFormat - Found single ObjectMapper in Registry to use: com.fasterxml.jackson.databind.ObjectMapper@15a8b242
+4942 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route2 started and consuming from: direct://get-continents
+4980 [main] INFO  org.xnio - XNIO version 3.3.8.Final
+4989 [main] INFO  org.xnio.nio - XNIO NIO Implementation Version 3.3.8.Final
+5095 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route3 started and consuming from: cxf://bean:whoisSOAPEndpoint
+5104 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route1 started and consuming from: spark-rest://get:rest/demo/continents
+5104 [main] INFO  o.apache.camel.spring.SpringCamelContext - Total 3 routes, of which 3 are started
+5105 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.21.0.fuse-760027-redhat-00001 (CamelContext: camelContext-fc39e765-59d9-46d8-8de7-0ee1a958c6e7) started in 1.164 seconds
+5116 [main] INFO  o.a.c.c.s.CamelHttpTransportServlet - Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+5143 [Thread-2] INFO  org.eclipse.jetty.util.log - Logging initialized @156789ms to org.eclipse.jetty.util.log.Slf4jLog
+5168 [main] INFO  o.s.b.c.e.u.UndertowEmbeddedServletContainer - Undertow started on port(s) 8080 (http)
+5172 [main] INFO  com.redhat.consulting.fuse.Application - Started Application in 4.983 seconds (JVM running for 156.818)
+5361 [Thread-2] WARN  o.eclipse.jetty.server.AbstractConnector - Ignoring deprecated socket close linger time
+5363 [Thread-2] INFO  s.e.jetty.EmbeddedJettyServer - == Spark has ignited ...
+5363 [Thread-2] INFO  s.e.jetty.EmbeddedJettyServer - >> Listening on 0.0.0.0:8082
+5366 [Thread-2] INFO  org.eclipse.jetty.server.Server - jetty-9.4.25.v20191220; built: 2019-12-20T17:00:00.294Z; git: a9729c7e7f33a459d2616a8f9e9ba8a90f432e95; jvm 1.8.0_242-b08
+5395 [Thread-2] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+5395 [Thread-2] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+5397 [Thread-2] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 660000ms
+5406 [Thread-2] INFO  o.eclipse.jetty.server.AbstractConnector - Started ServerConnector@35588e56{HTTP/1.1,[http/1.1]}{0.0.0.0:8082}
+5407 [Thread-2] INFO  org.eclipse.jetty.server.Server - Started @157053ms
+42265 [Thread-3] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c0b2694: startup date [Mon Jul 06 19:57:27 BRT 2020]; root of context hierarchy
+42272 [Thread-3] INFO  o.s.c.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483646
+42272 [Thread-3] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.21.0.fuse-760027-redhat-00001 (CamelContext: camelContext-fc39e765-59d9-46d8-8de7-0ee1a958c6e7) is shutting down
+42273 [Thread-3] INFO  o.a.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 3 routes (timeout 300 seconds)
+42276 [Camel (camelContext-fc39e765-59d9-46d8-8de7-0ee1a958c6e7) thread #1 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route1 shutdown complete, was consuming from: rest://get:/demo:/continents?componentName=spark-rest&produces=application%2Fjson&routeId=route1
+42277 [Camel (camelContext-fc39e765-59d9-46d8-8de7-0ee1a958c6e7) thread #1 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route3 shutdown complete, was consuming from: cxf://bean:whoisSOAPEndpoint
+42277 [Camel (camelContext-fc39e765-59d9-46d8-8de7-0ee1a958c6e7) thread #1 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route2 shutdown complete, was consuming from: direct://get-continents
+42277 [Thread-3] INFO  o.a.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 3 routes completed in 0 seconds
+42295 [Thread-12] INFO  s.e.jetty.EmbeddedJettyServer - >>> Spark shutting down ...
+42306 [Thread-3] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.21.0.fuse-760027-redhat-00001 (CamelContext: camelContext-fc39e765-59d9-46d8-8de7-0ee1a958c6e7) uptime 38.366 seconds
+42307 [Thread-3] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.21.0.fuse-760027-redhat-00001 (CamelContext: camelContext-fc39e765-59d9-46d8-8de7-0ee1a958c6e7) is shutdown in 0.035 seconds
+42308 [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+42308 [Thread-12] INFO  o.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@35588e56{HTTP/1.1,[http/1.1]}{0.0.0.0:8082}
+42308 [Thread-12] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+42309 [Thread-12] INFO  s.e.jetty.EmbeddedJettyServer - done
+42313 [Thread-3] INFO  o.a.c.c.s.CamelHttpTransportServlet - Destroyed CamelHttpTransportServlet[CamelServlet]

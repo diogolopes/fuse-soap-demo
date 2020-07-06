@@ -67,12 +67,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Check }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Check }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link Check }{@code >}
      */
     @XmlElementDecl(namespace = "http://soap.endpoints.whois.com/", name = "check")
     public JAXBElement<Check> createCheck(Check value) {
@@ -80,12 +76,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CheckResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CheckResponse }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link CheckResponse }{@code >}
      */
     @XmlElementDecl(namespace = "http://soap.endpoints.whois.com/", name = "checkResponse")
     public JAXBElement<CheckResponse> createCheckResponse(CheckResponse value) {
