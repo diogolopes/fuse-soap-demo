@@ -128,6 +128,15 @@
 					</execution>
 				</executions>
 			</plugin>
+			
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<fork>true</fork>
+					<executable>/usr/lib/jvm/java-1.8.0-openjdk/bin/javac</executable>
+				</configuration>
+			</plugin>
 
 
 			<plugin>
