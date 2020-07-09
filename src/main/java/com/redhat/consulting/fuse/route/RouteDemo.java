@@ -14,7 +14,7 @@ public class RouteDemo extends RouteBuilder {
 	public void configure() throws Exception {
 		
 		restConfiguration()
-			.component("spark-rest").contextPath("rest").port(8080) 
+			.component("spark-rest").contextPath("rest").port(8082) 
 			.bindingMode(RestBindingMode.json)
 			.apiProperty("api.description", "Exemplo basico com Fuse");
 
