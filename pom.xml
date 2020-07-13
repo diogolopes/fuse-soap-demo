@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.redhat.consulting.demo</groupId>
-	<artifactId>fuse-cxf-demo</artifactId>
+	<artifactId>fuse-soap-demo</artifactId>
 	<version>1.0</version>
 
 	<properties>
@@ -103,31 +103,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.cxf</groupId>
-				<artifactId>cxf-codegen-plugin</artifactId>
-				<version>3.3.6</version>
-				<executions>
-					<execution>
-						<id>generate-sources</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<sourceRoot>src/main/java</sourceRoot>
-							<wsdlOptions>
-								<wsdlOption>
-									<wsdl>src/main/resources/wsdl/country.wsdl</wsdl>
-								</wsdlOption>
-							</wsdlOptions>
-							<sourceDestDir>src/main/java</sourceDestDir>
-						</configuration>
-						<goals>
-							<goal>wsdl2java</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+			</plugin>			
 
 			<plugin>
 				<groupId>org.apache.cxf</groupId>

@@ -12,24 +12,7 @@ public class RouteDemo extends RouteBuilder {
 
 	@Override
 	public void configure() throws Exception {
-		
-		restConfiguration()
-			.component("spark-rest").contextPath("rest").port(8082) 
-			.bindingMode(RestBindingMode.json)
-			.apiProperty("api.description", "Exemplo basico com Fuse");
-
-		rest("/demo")
-			.produces("application/json")
-			.get("/continents")
-			.to("direct:get-continents");
-
-		 JacksonDataFormat jacksonDataFormat = new JacksonDataFormat();
-		    jacksonDataFormat.setPrettyPrint(true);
-		    jacksonDataFormat.enableFeature(SerializationFeature.WRAP_ROOT_VALUE);
-		
-		from("direct:get-continents")		
-		.bean("countryInfoServiceSoapType", "listOfContinentsByCode")		
-		.to("processorDemo");
+	
 		
 		from("cxf:bean:whoisSOAPEndpoint")
 		.to("mock:xpto");
