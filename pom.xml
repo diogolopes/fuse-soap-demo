@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.redhat.consulting.demo</groupId>
 	<artifactId>fuse-soap-demo</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 
 	<properties>
 		<project.reporting.outputencoding>UTF-8</project.reporting.outputencoding>
