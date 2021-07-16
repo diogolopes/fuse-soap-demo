@@ -8,7 +8,7 @@ mvn clean generate-sources
 mvn spring-boot:run
 ```
 
-##capitalCitySoapEndpoint route
+## capitalCitySoapEndpoint route
 
 The route will invoke the WSDL *[http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?wsdl](http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?wsdl)* operation *capitalCity*
 
