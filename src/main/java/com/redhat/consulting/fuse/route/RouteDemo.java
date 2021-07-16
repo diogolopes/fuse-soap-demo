@@ -14,14 +14,14 @@ public class RouteDemo extends RouteBuilder {
 	
 		 from("timer://foo?fixedRate=true&period=5000")
 		 .routeId("capitalCitySoapEndpoint")		 
-		 .setBody(constant("US"))
+		 
 		 .process(new Processor() {
 			
 			@Override
 			public void process(Exchange exchange) throws Exception {
 				
 				CountryInfoService x = new CountryInfoService();
-				System.out.println(x.getCountryInfoServiceSoap().capitalCity("US"));
+				System.out.println(x.getCountryInfoServiceSoap().capitalCity("BR"));
 				
 			}
 		});
