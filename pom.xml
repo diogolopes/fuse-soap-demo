@@ -28,7 +28,7 @@
 	</dependencyManagement>
 
 	<dependencies>
-	
+
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-cxf</artifactId>
@@ -43,12 +43,12 @@
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-core</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-spring</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-jackson</artifactId>
@@ -77,7 +77,7 @@
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-servlet-starter</artifactId>
 		</dependency>
-		
+
 	</dependencies>
 
 	<build>
@@ -99,41 +99,44 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>			
+			</plugin>
+
+			<!-- <plugin> <groupId>org.apache.cxf</groupId> <artifactId>cxf-java2ws-plugin</artifactId> 
+				<version>3.1.5.redhat-630262</version> <executions> <execution> <id>process-classes</id> 
+				<phase>process-classes</phase> <configuration> <className>com.redhat.consulting.fuse.service.ISoapWhoisService</className> 
+				<outputFile>${basedir}/src/main/resources/wsdl/country.wsdl</outputFile> 
+				<soap12>false</soap12> <genWsdl>true</genWsdl> <verbose>true</verbose> </configuration> 
+				<goals> <goal>java2ws</goal> </goals> </execution> </executions> <dependencies> 
+				<dependency> <groupId>org.apache.cxf</groupId> <artifactId>cxf-rt-frontend-jaxws</artifactId> 
+				<version>3.1.5.redhat-630262</version> </dependency> <dependency> <groupId>org.apache.cxf</groupId> 
+				<artifactId>cxf-rt-frontend-simple</artifactId> <version>3.1.5.redhat-630262</version> 
+				</dependency> </dependencies> </plugin> -->
+
+
 
 			<plugin>
 				<groupId>org.apache.cxf</groupId>
-				<artifactId>cxf-java2ws-plugin</artifactId>		
-				<version>3.1.5.redhat-630262</version>		
+				<artifactId>cxf-codegen-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>process-classes</id>
-						<phase>process-classes</phase>
+						<id>generate-sources</id>
+						<phase>generate-sources</phase>
 						<configuration>
-							<className>com.redhat.consulting.fuse.service.ISoapWhoisService</className>
-							<outputFile>${basedir}/src/main/resources/wsdl/whois.wsdl</outputFile>
-							<soap12>false</soap12>
-							<genWsdl>true</genWsdl>
-							<verbose>true</verbose>
+							<sourceRoot>src/main/java</sourceRoot>
+							<wsdlOptions>
+								<wsdlOption>
+									<wsdl>${basedir}/src/main/resources/wsdl/country.wsdl</wsdl>
+								</wsdlOption>
+							</wsdlOptions>
 						</configuration>
 						<goals>
-							<goal>java2ws</goal>
+							<goal>wsdl2java</goal>
 						</goals>
 					</execution>
 				</executions>
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.cxf</groupId>
-						<artifactId>cxf-rt-frontend-jaxws</artifactId>	
-						<version>3.1.5.redhat-630262</version>			
-					</dependency>
-					<dependency>
-						<groupId>org.apache.cxf</groupId>
-						<artifactId>cxf-rt-frontend-simple</artifactId>	
-						<version>3.1.5.redhat-630262</version>			
-					</dependency>
-				</dependencies>
 			</plugin>
+
+
 		</plugins>
 	</build>
 	<!-- Definindo repositorios da REDHAT -->
@@ -173,7 +176,7 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-	
-	
+
+
 
 </project>

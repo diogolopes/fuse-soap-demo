@@ -1,11 +1,10 @@
 package com.redhat.consulting.fuse.route;
 
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.component.jackson.JacksonDataFormat;
-import org.apache.camel.model.rest.RestBindingMode;
+import org.oorsprong.websamples_countryinfo.CountryInfoService;
 import org.springframework.stereotype.Component;
-
-import com.fasterxml.jackson.databind.SerializationFeature;
 
 @Component
 public class RouteDemo extends RouteBuilder {
@@ -13,9 +12,20 @@ public class RouteDemo extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
 	
-		
-		from("cxf:bean:whoisSOAPEndpoint")
-		.to("mock:xpto");
+		 from("timer://foo?fixedRate=true&period=5000")
+		 .routeId("capitalCitySoapEndpoint")		 
+		 .setBody(constant("US"))
+		 .process(new Processor() {
+			
+			@Override
+			public void process(Exchange exchange) throws Exception {
+				
+				CountryInfoService x = new CountryInfoService();
+				System.out.println(x.getCountryInfoServiceSoap().capitalCity("US"));
+				
+			}
+		});
+		     
 		
 	}
 }
